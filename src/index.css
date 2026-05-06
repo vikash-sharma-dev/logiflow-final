@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 220 45% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 45% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 45% 11%;
+
+    /* Deep navy brand */
+    --primary: 218 80% 16%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Teal accent */
+    --accent: 182 72% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 220 45% 11%;
+
+    --muted: 210 30% 96%;
+    --muted-foreground: 215 18% 42%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 90%;
+    --input: 215 25% 90%;
+    --ring: 182 72% 42%;
+
+    --radius: 0.875rem;
+
+    /* Brand custom tokens */
+    --navy-deep: 220 60% 8%;
+    --navy: 218 80% 16%;
+    --navy-soft: 215 50% 24%;
+    --teal: 182 72% 42%;
+    --teal-bright: 178 80% 50%;
+    --teal-soft: 180 60% 92%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(220 60% 8%) 0%, hsl(218 70% 14%) 40%, hsl(195 60% 22%) 75%, hsl(178 70% 32%) 100%);
+    --gradient-cta: linear-gradient(120deg, hsl(220 65% 10%) 0%, hsl(200 70% 20%) 60%, hsl(178 80% 38%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(210 50% 99%) 0%, hsl(190 50% 96%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(182 72% 42%) 0%, hsl(178 85% 52%) 100%);
+
+    --shadow-soft: 0 4px 24px -8px hsl(218 50% 20% / 0.08);
+    --shadow-lift: 0 20px 40px -20px hsl(218 60% 18% / 0.18);
+    --shadow-glow: 0 0 60px hsl(178 80% 50% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark { --background: 220 60% 8%; --foreground: 210 40% 98%; }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { font-family: 'Inter', system-ui, sans-serif; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: 'Sora', 'Inter', sans-serif; letter-spacing: -0.035em; font-weight: 800; line-height: 1.0; }
+  h1 { font-weight: 900; line-height: 0.98; letter-spacing: -0.045em; }
+  h2 { font-weight: 800; line-height: 1.02; letter-spacing: -0.04em; }
+  h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+  p { line-height: 1.55; }
+}
+
+@layer utilities {
+  .bg-hero-gradient { background: var(--gradient-hero); }
+  .bg-cta-gradient { background: var(--gradient-cta); }
+  .bg-soft-gradient { background: var(--gradient-soft); }
+  .bg-accent-gradient { background: var(--gradient-accent); }
+  .text-gradient-teal {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-lift { box-shadow: var(--shadow-lift); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+
+  .glass-card {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(0 0% 100% / 0.6);
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  .animate-float { animation: float-slow 6s ease-in-out infinite; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fade-up 0.8s ease-out both; }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+  .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+}

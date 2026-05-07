@@ -34,7 +34,7 @@ export const Footer = () => (
           <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal-bright" /><span>Plot No. 2, Next to SBI Bank,<br />Transport Nagar, Jaipur – 302004</span></li>
           <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-teal-bright" /><a href="tel:+916262762626" className="hover:text-white">+91-62627-62626</a></li>
           <li className="flex gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-teal-bright" /><a href="mailto:info@logiflow.co.in" className="hover:text-white">info@logiflow.co.in</a></li>
-          <li className="flex gap-3"><Globe className="mt-0.5 h-4 w-4 shrink-0 text-teal-bright" /><a href="https://www.logiflow.co.in" className="hover:text-white">www.logiflow.co.in</a></li>
+          {/* <li className="flex gap-3"><Globe className="mt-0.5 h-4 w-4 shrink-0 text-teal-bright" /><a href="https://www.logiflow.co.in" className="hover:text-white">www.logiflow.co.in</a></li> */}
         </ul>
       </div>
     </div>

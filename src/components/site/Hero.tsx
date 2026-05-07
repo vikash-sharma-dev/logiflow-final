@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-logistics.jpg";
 
 export const Hero = () => (
   <section id="home" className="relative isolate overflow-hidden bg-[#fdf6ec]">
-    {/* Full-bleed photographic hero — van anchored right */}
+    {/* Full-bleeds photographic hero — van anchored right */}
     <div className="pointer-events-none absolute inset-0">
       <img
         src={heroImg}

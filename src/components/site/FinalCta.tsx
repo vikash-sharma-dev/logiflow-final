@@ -20,7 +20,7 @@ export const FinalCta = () => {
     const toastId = toast.loading("Sending inquiry Please wait...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/send", {
+      const response = await fetch("https://logiflow-website-backend.vercel.app/api/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

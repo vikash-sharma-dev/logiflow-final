@@ -14,8 +14,8 @@ export const Footer = () => (
   <footer className="bg-navy-deep py-16 text-white/70">
     <div className="mx-auto grid container gap-10 px-6 md:grid-cols-4 lg:px-12">
       <div className="md:col-span-2">
-        <img src={logo} alt="Logiflow Pvt. Ltd." className="h-16 w-auto" />
-        <p className="mt-5 ml-14 max-w-md text-sm leading-relaxed text-white/65">
+        <img src={logo} alt="Logiflow Pvt. Ltd." className="h-6 w-1.5rem" />
+        <p className="mt-5  max-w-md text-sm leading-relaxed text-white/65">
           Logiflow Pvt. Ltd. is a logistics aggregator connecting Indian businesses with multiple
           courier and cargo partners — with a single point of contact and dedicated support.
         </p>
